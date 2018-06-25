@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mm" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.125" altunitdist="mm" altunit="mm"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.25" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -173,7 +173,6 @@
 <fusionsync huburn="a.cGVyc29uYWw6dWUyOTRlNWI0" projecturn="a.cGVyc29uYWw6dWUyOTRlNWI0IzIwMTgwNjIyMTM3MzUxMTgx" f3durn="urn:adsk.wipprod:dm.lineage:VgF9cCN1SuO1Fo5ZokwAeA" pcbguid="a747b205-4403-415a-b58b-43fccb9cd7a5" lastpulledtime="" lastsyncedchangeguid="99fbabed-0915-d1c1-0f20-aca28310aa02"/>
 <plain>
 <wire x1="-12.8" y1="-17.54" x2="12.8" y2="-17.54" width="0" layer="20"/>
-<wire x1="12.8" y1="-17.54" x2="12.8" y2="12.66" width="0" layer="20"/>
 <text x="-6" y="0" size="1.9304" layer="21" font="vector" ratio="10" rot="R90" align="bottom-center">AMG8833</text>
 <text x="1" y="-3.125" size="1.778" layer="22" ratio="12" rot="MR90" align="bottom-right">github.com
 /ottojo
@@ -181,13 +180,14 @@
 <text x="0" y="13" size="2.54" layer="22" ratio="10" rot="MR0" align="bottom-center">+</text>
 <text x="-3.5" y="13" size="2.54" layer="22" font="vector" ratio="10" rot="MR0" align="bottom-center">-</text>
 <text x="3.5" y="13" size="2.54" layer="22" ratio="10" rot="MR0" align="bottom-center">~</text>
-<wire x1="8.8" y1="16.66" x2="-8.8" y2="16.66" width="0" layer="20"/>
-<wire x1="-12.8" y1="12.66" x2="-12.8" y2="-17.54" width="0" layer="20"/>
-<wire x1="-12.8" y1="12.66" x2="-8.8" y2="16.66" width="0" layer="20" curve="-90" cap="flat"/>
-<wire x1="8.8" y1="16.66" x2="12.8" y2="12.66" width="0" layer="20" curve="-90" cap="flat"/>
 <text x="-3.5" y="13" size="2.54" layer="21" font="vector" ratio="10" rot="MR0" align="bottom-center">-</text>
 <text x="0" y="13" size="2.54" layer="21" ratio="10" rot="MR0" align="bottom-center">+</text>
 <text x="3.5" y="13" size="2.54" layer="21" ratio="10" rot="MR0" align="bottom-center">~</text>
+<wire x1="-12.8" y1="-17.54" x2="-12.8" y2="12.66" width="0" layer="20"/>
+<wire x1="12.8" y1="-17.54" x2="12.8" y2="12.66" width="0" layer="20"/>
+<wire x1="-8.8" y1="16.66" x2="8.8" y2="16.66" width="0" layer="20"/>
+<wire x1="-12.8" y1="12.66" x2="-8.8" y2="16.66" width="0" layer="20" curve="-90"/>
+<wire x1="8.8" y1="16.66" x2="12.8" y2="12.66" width="0" layer="20" curve="-90"/>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">
