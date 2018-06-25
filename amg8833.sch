@@ -15075,8 +15075,8 @@ OSHW_LOGO</description>
 </classes>
 <parts>
 <part name="+3V2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
-<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="4k7"/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="4k7"/>
+<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="10k"/>
+<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="10k"/>
 <part name="U1" library="AMG8833" library_urn="urn:adsk.eagle:library:3739745" deviceset="AMG8833" device="" package3d_urn="urn:adsk.eagle:package:3739748/3"/>
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -15104,12 +15104,14 @@ OSHW_LOGO</description>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_08" device="LOCK_NO_SILK" package3d_urn="urn:adsk.eagle:package:38147/1"/>
 <part name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_08" device="LOCK_NO_SILK" package3d_urn="urn:adsk.eagle:package:38147/1"/>
-<part name="J3" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_03" device="LONGPADS" package3d_urn="urn:adsk.eagle:package:38068/1"/>
 <part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="JP1" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39281/1" value=""/>
 <part name="JP2" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39288/1" value=""/>
 <part name="LOGO1" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" deviceset="OSHW-LOGO" device="M" package3d_urn="urn:adsk.eagle:package:37126/1"/>
+<part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="10k"/>
+<part name="+3V6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="J3" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_03" device="SCREW-NS" package3d_urn="urn:adsk.eagle:package:38088/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -15147,12 +15149,14 @@ OSHW_LOGO</description>
 <instance part="GND3" gate="1" x="134.62" y="78.74"/>
 <instance part="J1" gate="G$1" x="119.38" y="50.8" rot="MR0"/>
 <instance part="J2" gate="G$1" x="144.78" y="50.8"/>
-<instance part="J3" gate="J$1" x="215.9" y="111.76"/>
 <instance part="P+4" gate="1" x="233.68" y="116.84"/>
 <instance part="GND5" gate="1" x="226.06" y="104.14"/>
 <instance part="JP1" gate="G$1" x="170.18" y="149.86" rot="R90"/>
 <instance part="JP2" gate="G$1" x="226.06" y="121.92" rot="R90"/>
 <instance part="LOGO1" gate="G$1" x="30.48" y="48.26"/>
+<instance part="R6" gate="G$1" x="81.28" y="45.72" rot="R90"/>
+<instance part="+3V6" gate="G$1" x="81.28" y="55.88"/>
+<instance part="J3" gate="J$1" x="215.9" y="111.76"/>
 </instances>
 <busses>
 </busses>
@@ -15197,6 +15201,11 @@ OSHW_LOGO</description>
 <wire x1="185.42" y1="177.8" x2="187.96" y2="177.8" width="0.1524" layer="91"/>
 <junction x="185.42" y="177.8"/>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="R6" gate="G$1" pin="2"/>
+<wire x1="81.28" y1="53.34" x2="81.28" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="+3V6" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -15248,10 +15257,10 @@ OSHW_LOGO</description>
 <pinref part="GND3" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="J3" gate="J$1" pin="1"/>
 <wire x1="223.52" y1="109.22" x2="226.06" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="109.22" x2="226.06" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
+<pinref part="J3" gate="J$1" pin="1"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -15298,6 +15307,11 @@ OSHW_LOGO</description>
 <label x="152.4" y="50.8" size="1.016" layer="95" xref="yes"/>
 <pinref part="J2" gate="G$1" pin="4"/>
 <wire x1="149.86" y1="50.8" x2="152.4" y2="50.8" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R6" gate="G$1" pin="1"/>
+<wire x1="81.28" y1="40.64" x2="81.28" y2="38.1" width="0.1524" layer="91"/>
+<label x="81.28" y="38.1" size="1.016" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -15368,10 +15382,10 @@ OSHW_LOGO</description>
 <pinref part="P+3" gate="1" pin="+5V"/>
 </segment>
 <segment>
-<pinref part="J3" gate="J$1" pin="2"/>
 <wire x1="223.52" y1="111.76" x2="233.68" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="111.76" x2="233.68" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="P+4" gate="1" pin="+5V"/>
+<pinref part="J3" gate="J$1" pin="2"/>
 </segment>
 </net>
 <net name="NEOPIX3V3" class="0">
@@ -15385,9 +15399,9 @@ OSHW_LOGO</description>
 <label x="170.18" y="182.88" size="1.016" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<label x="111.76" y="55.88" size="1.016" layer="95" rot="R180" xref="yes"/>
-<pinref part="J1" gate="G$1" pin="6"/>
-<wire x1="114.3" y1="55.88" x2="111.76" y2="55.88" width="0.1524" layer="91"/>
+<label x="111.76" y="53.34" size="1.016" layer="95" rot="R180" xref="yes"/>
+<pinref part="J1" gate="G$1" pin="5"/>
+<wire x1="111.76" y1="53.34" x2="114.3" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="NEOPIX5V" class="0">
@@ -15409,10 +15423,10 @@ OSHW_LOGO</description>
 </net>
 <net name="MEOPIXOUT" class="0">
 <segment>
-<pinref part="J3" gate="J$1" pin="3"/>
 <wire x1="223.52" y1="114.3" x2="226.06" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="114.3" x2="226.06" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="G$1" pin="2"/>
+<pinref part="J3" gate="J$1" pin="3"/>
 </segment>
 </net>
 <net name="NEOPIXDO" class="0">
