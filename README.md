@@ -5,6 +5,7 @@ It contains a AMG8833 thermal sensor array, three WS2812 (Neopixel) LEDs and a 5
 
 Top Side|Bottom Side
 :-------------------------:|:-------------------------:
+![Top Side](/3d1.png?raw=true)|![Bottom Side](/3d2.png?raw=true)
 ![Top Side](/top.png?raw=true)|![Bottom Side](/bot.png?raw=true)
 
 
